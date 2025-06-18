@@ -1,5 +1,5 @@
 # **Anonymous Question Asking Platform**
----
+
 ### 🧠 **Project Overview**
 
 The **Anonymous Question Asking Platform** is a real-time, web-based application that facilitates anonymous interactions between students and teachers. Designed primarily for educational settings, the platform ensures that students can express doubts or feedback without fear of judgment, while giving teachers moderation tools to manage and maintain a respectful environment.
