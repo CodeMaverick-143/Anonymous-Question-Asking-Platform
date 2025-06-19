@@ -7,7 +7,7 @@ const TeacherDashboard: React.FC = () => {
   const [roomName, setRoomName] = useState('');
   const [showCreateForm, setShowCreateForm] = useState(false);
   const [copiedCode, setCopiedCode] = useState('');
-  const { user, currentRoom, createRoom, logout, rooms } = useApp();
+  const { user, currentRoom, createRoom, logout, rooms, joinRoom } = useApp(); // Add joinRoom here
 
   const handleCreateRoom = () => {
     if (!roomName.trim()) return;
@@ -116,12 +116,9 @@ const TeacherDashboard: React.FC = () => {
                     </button>
                   </div>
                   
+                  // Inside the rooms mapping:
                   <button
-                    onClick={() => {
-                      // Set current room to this room
-                      const { joinRoom } = useApp();
-                      joinRoom(room.code);
-                    }}
+                    onClick={() => joinRoom(room.code)} // Use joinRoom directly from props
                     className="w-full bg-gradient-to-r from-purple-500 to-pink-600 text-white py-2 px-4 rounded-lg text-sm hover:from-purple-600 hover:to-pink-700 transition-all duration-200"
                   >
                     Enter Room
